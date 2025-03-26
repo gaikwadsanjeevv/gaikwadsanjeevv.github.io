@@ -8,24 +8,44 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Welcome to My Portfolio</h1>
-            <p>Sanjeev Gaikwad - Full Stack Developer</p>
-        </header>
+        <!-- Left Side: Portfolio -->
+        <div class="left-panel">
+            <header>
+                <h1>Welcome to My Portfolio</h1>
+                <p>Sanjeev Gaikwad - Full Stack Developer</p>
+            </header>
 
-        <!-- Navigation Links -->
-        <nav>
-            <ul class="nav-links">
-                <li><a href="front-end.html">Front-End</a></li>
-                <li><a href="java.html">Java</a></li>
-                <li><a href="sql.html">SQL</a></li>
-                <li><a href="frameworks.html">Frameworks</a></li>
-            </ul>
-        </nav>
+            <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
 
-        <section class="intro">
-            <p>I am a passionate developer with experience in various technologies. Explore my work through the links above.</p>
-        </section>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="front-end.html">Front-End</a></li>
+                    <li><a href="java.html">Java</a></li>
+                    <li><a href="sql.html">SQL</a></li>
+                    <li><a href="frameworks.html">Frameworks</a></li>
+                </ul>
+            </nav>
+
+            <section class="intro">
+                <p>I am a passionate developer with experience in various technologies. Explore my work through the links above.</p>
+            </section>
+        </div>
+
+        <!-- Right Side: Login Form -->
+        <div class="right-panel">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="register">Register here</a></p>
+        </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
