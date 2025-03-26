@@ -1,78 +1,76 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Styling the entire body */
 body {
-    background: linear-gradient(135deg, #f6d365, #fda085);
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f5f5;
 }
 
-/* Container for the main content */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 2;
+    background-color: #fff;
     padding: 40px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
 }
 
-/* Header Styling */
-header h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 10px;
+.right-panel {
+    flex: 1;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #777;
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    object-fit: cover;
 }
 
-/* Navigation Links Styling */
 .nav-links {
-    list-style-type: none;
-    padding: 20px 0;
+    list-style: none;
+    padding: 0;
 }
 
 .nav-links li {
-    display: inline;
-    margin-right: 20px;
+    margin: 10px 0;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #f6d365;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    color: #333;
+    font-weight: bold;
 }
 
-.nav-links a:hover {
-    color: #fda085;
-}
-
-/* Content section styling */
-.content {
+.intro {
     margin-top: 30px;
-    font-size: 1.1rem;
-    color: #444;
-    text-align: left;
 }
 
-.content ul {
-    list-style-type: none;
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
 }
 
-.content li {
-    padding: 8px 0;
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-/* Attractive hover effects on links */
-.nav-links a:hover {
-    text-decoration: underline;
+form button:hover {
+    background-color: #019870;
 }
