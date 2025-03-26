@@ -1,28 +1,80 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f0f4ff, #ffffff);
-  color: #333;
+  background: linear-gradient(to right, #dff9fb, #f6e58d);
+  color: #2d3436;
 }
+
 .container {
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
 }
+
 .left-panel {
   flex: 2;
   padding: 40px;
-  background: #fff;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 }
+
 .right-panel {
   flex: 1;
   background-color: #1e272e;
-  color: #fff;
+  color: white;
   padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  margin-right: 15px;
+  color: #0984e3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-top: 30px;
+}
+
+.projects ul {
+  padding-left: 20px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.grid span {
+  background-color: #dfe6e9;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
 .profile-pic {
   width: 160px;
   height: 160px;
@@ -31,51 +83,22 @@ body {
   object-fit: cover;
   margin-bottom: 30px;
 }
-header h1 {
-  font-size: 32px;
-  margin-bottom: 5px;
-}
-header p {
-  font-size: 18px;
-  margin: 0;
-}
-.socials a {
-  margin-right: 15px;
-  color: #0984e3;
-  text-decoration: none;
-  font-weight: bold;
-}
-.socials a:hover {
-  text-decoration: underline;
-}
-section {
-  margin-top: 40px;
-}
-.projects ul {
-  padding-left: 20px;
-}
-.skills .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-.skills .grid span {
-  background-color: #dfe6e9;
-  padding: 8px 14px;
-  border-radius: 6px;
-}
+
 .login-box {
   width: 100%;
   max-width: 300px;
+  text-align: center;
 }
+
 form input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: none;
   border-radius: 6px;
+  font-size: 16px;
 }
+
 form button {
   width: 100%;
   padding: 12px;
@@ -84,14 +107,19 @@ form button {
   border: none;
   border-radius: 6px;
   font-size: 16px;
+  cursor: pointer;
 }
+
 form button:hover {
   background-color: #00b894;
 }
+
 .register-text {
   margin-top: 10px;
   font-size: 14px;
 }
+
 .register-text a {
   color: #81ecec;
+  text-decoration: underline;
 }
