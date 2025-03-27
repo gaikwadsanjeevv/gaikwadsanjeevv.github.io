@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: row;
   min-height: 100vh;
+  position: relative;
 }
 
 .left-panel {
@@ -124,7 +125,6 @@ form button:hover {
   text-decoration: underline;
 }
 
-
 .resume-arrow {
   display: flex;
   align-items: center;
@@ -161,30 +161,6 @@ form button:hover {
   margin-top: 20px;
 }
 
-.resume-arrow {
-  display: flex;
-  align-items: center;
-  background-color: #ffeaa7;
-  color: #2d3436;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.resume-arrow:hover {
-  transform: scale(1.05);
-  background-color: #fdcb6e;
-}
-
-.resume-arrow img {
-  width: 30px;
-  height: auto;
-  margin-right: 10px;
-}
-
 .resume-float {
   position: absolute;
   top: 72%;
@@ -212,6 +188,3 @@ form button:hover {
   transform: scale(1.05);
   background-color: #fdcb6e;
 }
-
-
-
