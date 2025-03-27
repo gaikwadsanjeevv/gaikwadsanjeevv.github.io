@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,7 +16,7 @@
     <section class="tools">
       <h2>🧰 Developer Tools</h2>
       <ul>
-        <li><a href="tools/calculator.html">🧮 Calculator</a></li>
+        <li><a href="tools/calculator.html">🧫 Calculator</a></li>
         <li><a href="bmi.html">🏋️‍♂️ BMI Calculator</a></li>
         <li><a href="notes.html">📝 Notes App</a></li>
       </ul>
@@ -51,6 +51,23 @@
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
   <script src="firebase-config.js"></script>
-  <script src="dashboard.js"></script>
+  <script>
+    const auth = firebase.auth();
+
+    // Protect dashboard: redirect if not logged in
+    auth.onAuthStateChanged((user) => {
+      if (!user) {
+        window.location.href = "index.html";
+      } else {
+        document.getElementById("username").textContent = user.email.split("@")[0];
+      }
+    });
+
+    function logout() {
+      auth.signOut().then(() => {
+        window.location.href = "index.html";
+      });
+    }
+  </script>
 </body>
 </html>
