@@ -11,7 +11,7 @@ form.addEventListener("submit", (e) => {
   auth.signInWithEmailAndPassword(email, password)
     .then(() => {
       alert("Login successful!");
-      form.reset();
+      window.location.href = "dashboard.html";  // ✅ Redirect after login
     })
     .catch((err) => alert("Login failed: " + err.message));
 });
@@ -30,12 +30,10 @@ registerLink.addEventListener("click", (e) => {
   auth.createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       const userId = userCredential.user.uid;
-
       db.ref("users/" + userId).set({
         username: username,
         email: email
       });
-
       alert("Registration successful!");
       form.reset();
     })
