@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h1>Welcome, <span id="username">User</span>!</h1>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <section class="tools">
+      <h2>🧰 Developer Tools</h2>
+      <ul>
+        <li><a href="calculator.html">🧮 Calculator</a></li>
+        <li><a href="bmi.html">🏋️‍♂️ BMI Calculator</a></li>
+        <li><a href="notes.html">📝 Notes App</a></li>
+      </ul>
+    </section>
+
+    <section class="games">
+      <h2>🎮 Games</h2>
+      <ul>
+        <li><a href="tic-tac-toe.html">⭕ Tic Tac Toe</a></li>
+        <li><a href="quiz.html">📚 JavaScript Quiz</a></li>
+      </ul>
+    </section>
+
+    <section class="resources">
+      <h2>📚 Developer Resources</h2>
+      <ul>
+        <li><a href="https://github.com/gaikwadsanjeevv" target="_blank">My GitHub</a></li>
+        <li><a href="https://spring.io/projects/spring-boot" target="_blank">Spring Boot Docs</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript MDN</a></li>
+      </ul>
+    </section>
+
+    <section class="feedback">
+      <h2>✉️ Send Feedback</h2>
+      <form id="feedback-form">
+        <textarea placeholder="Share your thoughts..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
