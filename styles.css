@@ -123,3 +123,33 @@ form button:hover {
   color: #81ecec;
   text-decoration: underline;
 }
+
+
+.resume-arrow {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #2d3436;
+  text-decoration: none;
+  background-color: #ffeaa7;
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: fit-content;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.resume-arrow img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.resume-arrow:hover {
+  transform: scale(1.05);
+  background-color: #fdcb6e;
+}
+
