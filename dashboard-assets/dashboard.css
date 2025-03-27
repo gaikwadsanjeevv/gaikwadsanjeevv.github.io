@@ -105,12 +105,13 @@ form button {
 }
 
 .resume-link {
-  background-color: #ffeaa7;
+  background-color: blue;
   padding: 6px 12px;
   border-radius: 6px;
   text-decoration: none;
   color: #2d3436;
   font-weight: bold;
+  text-color: white;
 }
 
 .resume-link:hover {
