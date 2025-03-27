@@ -124,3 +124,10 @@ form button:hover {
   color: #81ecec;
   text-decoration: underline;
 }
+.login-note {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #f1f2f6;
+  text-align: center;
+}
+
