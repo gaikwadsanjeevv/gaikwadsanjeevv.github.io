@@ -3,19 +3,21 @@ const db = firebase.database();
 const form = document.getElementById("login-form");
 const registerLink = document.getElementById("register");
 
+// ✅ LOGIN
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = form["email"].value;
   const password = form["password"].value;
 
   auth.signInWithEmailAndPassword(email, password)
-    .then(() => {
+    .then((userCredential) => {
       alert("Login successful!");
       window.location.href = "dashboard.html";  // ✅ Redirect after login
     })
     .catch((err) => alert("Login failed: " + err.message));
 });
 
+// ✅ REGISTER
 registerLink.addEventListener("click", (e) => {
   e.preventDefault();
   const email = document.getElementById("email").value.trim();
@@ -30,11 +32,13 @@ registerLink.addEventListener("click", (e) => {
   auth.createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       const userId = userCredential.user.uid;
+
       db.ref("users/" + userId).set({
         username: username,
-        email: email
+        email: email,
       });
-      alert("Registration successful!");
+
+      alert("Registration successful! Please log in.");
       form.reset();
     })
     .catch((error) => {
