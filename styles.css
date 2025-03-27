@@ -185,4 +185,33 @@ form button:hover {
   margin-right: 10px;
 }
 
+.resume-float {
+  position: absolute;
+  top: 72%;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #ffeaa7;
+  color: #2d3436;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.resume-float img {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.resume-float:hover {
+  transform: scale(1.05);
+  background-color: #fdcb6e;
+}
+
+
 
