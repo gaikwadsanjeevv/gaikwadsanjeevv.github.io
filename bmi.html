@@ -3,81 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Unit & BMI Converter</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #dff9fb, #f6e58d);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      width: 320px;
-    }
-
-    h2, h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    label {
-      font-weight: bold;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      width: 100%;
-      padding: 12px;
-      background-color: #0984e3;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    button:hover {
-      background-color: #00b894;
-    }
-
-    .result {
-      margin-top: 15px;
-      font-weight: bold;
-      color: #2d3436;
-      text-align: center;
-    }
-
-    @media screen and (max-width: 768px) {
-      body {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-    .height-row {
-  display: flex;
-  gap: 10px;
-}
-
-.height-row input {
-  flex: 1;
-}
-
-  </style>
+  <link rel="stylesheet" href="assets/bmi.css" />
 </head>
 <body>
 
@@ -85,19 +11,20 @@
   <div class="box">
     <h2>📏 Unit Converter</h2>
     <label>Height:</label>
-<div class="height-row">
-  <input type="number" id="feet" placeholder="Feet" />
-  <input type="number" id="inches" placeholder="Inches" />
-</div>
-
+    <div class="height-row">
+      <input type="number" id="feet" placeholder="Feet" />
+      <input type="number" id="inches" placeholder="Inches" />
+    </div>
 
     <label>Weight (lbs):</label>
     <input type="number" id="lbs" placeholder="Pounds (lbs)" />
 
     <button onclick="convert()">Convert</button>
-
     <div class="result" id="output"></div>
   </div>
+
+  <!-- Animated Arrow -->
+  <div class="arrow">&#10140;</div>
 
   <!-- BMI Calculator -->
   <div class="box">
@@ -114,9 +41,7 @@
     <div class="result" id="result"></div>
   </div>
 
-  <!-- JS Script -->
   <script>
-    // Conversion Logic
     function convert() {
       const feet = parseFloat(document.getElementById("feet").value);
       const inches = parseFloat(document.getElementById("inches").value);
@@ -135,7 +60,6 @@
         `📏 Height: <strong>${cm} cm</strong><br>⚖️ Weight: <strong>${kg} kg</strong>`;
     }
 
-    // BMI Logic
     document.getElementById("bmi-form").addEventListener("submit", function (e) {
       e.preventDefault();
       const height = parseFloat(document.getElementById("height").value);
@@ -157,6 +81,5 @@
       document.getElementById("result").innerHTML = message;
     });
   </script>
-
 </body>
 </html>
