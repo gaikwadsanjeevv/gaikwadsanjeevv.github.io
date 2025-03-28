@@ -52,3 +52,13 @@ button:hover {
   font-size: 18px;
   font-weight: bold;
 }
+
+.height-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+.height-inputs input {
+  flex: 1;
+}
+
