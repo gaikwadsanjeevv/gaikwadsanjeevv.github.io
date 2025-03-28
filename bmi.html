@@ -9,15 +9,19 @@
 <body>
   <div class="bmi-container">
     <h1>🏋️‍♂️ BMI Calculator</h1>
-    <form id="bmi-form">
-      <label for="height">Height (cm):</label>
-      <input type="number" id="height" placeholder="Enter height in cm" required />
+   <form id="bmi-form">
+  <label for="feet">Height:</label>
+  <div class="height-inputs">
+    <input type="number" id="feet" placeholder="Feet" required />
+    <input type="number" id="inches" placeholder="Inches" required />
+  </div>
 
-      <label for="weight">Weight (kg):</label>
-      <input type="number" id="weight" placeholder="Enter weight in kg" required />
+  <label for="lbs">Weight (lbs):</label>
+  <input type="number" id="lbs" placeholder="Enter weight in lbs" required />
 
-      <button type="submit">Calculate BMI</button>
-    </form>
+  <button type="submit">Calculate BMI</button>
+</form>
+
     <div id="result"></div>
   </div>
 
