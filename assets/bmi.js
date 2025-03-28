@@ -8,11 +8,7 @@ form.addEventListener("submit", function (e) {
   const inches = parseFloat(document.getElementById("inches").value);
   const lbs = parseFloat(document.getElementById("lbs").value);
 
- if (isNaN(feet) || feet < 0 || isNaN(inches) || inches < 0 || isNaN(lbs) || lbs <= 0) {
-  result.textContent = "Please enter valid height and weight!";
-  return;
-}
- {
+  if (!feet || feet < 0 || !inches || inches < 0 || !lbs || lbs <= 0) {
     result.textContent = "Please enter valid height and weight!";
     return;
   }
