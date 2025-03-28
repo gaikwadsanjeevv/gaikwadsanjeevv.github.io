@@ -4,16 +4,23 @@ const result = document.getElementById("result");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const height = parseFloat(document.getElementById("height").value);
-  const weight = parseFloat(document.getElementById("weight").value);
+  const feet = parseFloat(document.getElementById("feet").value);
+  const inches = parseFloat(document.getElementById("inches").value);
+  const lbs = parseFloat(document.getElementById("lbs").value);
 
-  if (!height || !weight || height <= 0 || weight <= 0) {
+  if (!feet || feet < 0 || !inches || inches < 0 || !lbs || lbs <= 0) {
     result.textContent = "Please enter valid height and weight!";
     return;
   }
 
-  const heightInMeters = height / 100;
-  const bmi = (weight / (heightInMeters * heightInMeters)).toFixed(2);
+  // Convert feet+inches to cm
+  const totalInches = feet * 12 + inches;
+  const heightInMeters = totalInches * 0.0254; // inch → meters
+
+  // Convert lbs to kg
+  const weightInKg = lbs * 0.453592;
+
+  const bmi = (weightInKg / (heightInMeters ** 2)).toFixed(2);
 
   let message = "";
 
