@@ -104,15 +104,14 @@ form button {
   align-items: center;
 }
 
-.resume-link {
-  background-color: blue;
-  padding: 6px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #2d3436;
-  font-weight: bold;
-  text-color: white;
-}
+ .resume-link {
+    background-color: pink;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: bold;
+ }
 
 .resume-link:hover {
   background-color: #fdcb6e;
