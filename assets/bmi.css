@@ -65,10 +65,15 @@ button:hover {
   flex: 1;
 }
 
-/* Animated Arrow Style */
+/* Animated Arrow */
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .arrow {
   font-size: 50px;
-  align-self: center;
   color: #2d3436;
   animation: bounce 1s infinite;
 }
