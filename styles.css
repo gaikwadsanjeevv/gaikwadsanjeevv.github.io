@@ -139,4 +139,53 @@ section {
 .project h3 {
   margin-top: 0;
 }
+.right-panel {
+  flex: 1;
+  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364); /* dark blue gradient */
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  background-color: #0984e3;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  background-color: #74b9ff;
+  transform: translateY(-2px);
+}
 
