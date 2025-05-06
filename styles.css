@@ -20,13 +20,17 @@ body {
 
 .right-panel {
   flex: 1;
-  background-color: #1e272e;
+  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364); /* dark blue gradient */
   color: white;
   padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 header h1 {
@@ -76,82 +80,8 @@ section {
   font-size: 14px;
 }
 
-.profile-pic {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid #000;
-  object-fit: cover;
+.profile-wrapper {
   margin-bottom: 30px;
-}
-.login-note {
-  margin-bottom: 15px;
-  font-size: 14px;
-  color: #f1f2f6;
-  text-align: center;
-}
-.login-arrow-msg {
-  text-align: center;
-  margin-bottom: 20px;
-  background-color: #ffeaa7;
-  color: #2d3436;
-  padding: 12px;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.cta-buttons {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.btn {
-  background-color: #2e86de;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #1e60a1;
-}
-
-.project-list {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-.project {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 15px 0;
-  background-color: #f9f9f9;
-}
-.project h3 {
-  margin-top: 0;
-}
-.right-panel {
-  flex: 1;
-  background: linear-gradient(160deg, #0f2027, #203a43, #2c5364); /* dark blue gradient */
-  color: white;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: -5px 0 10px rgba(0,0,0,0.2);
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
 }
 
 .profile-pic {
@@ -160,14 +90,38 @@ section {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   margin-bottom: 20px;
 }
 
+.login-arrow-msg {
+  text-align: center;
+  margin-bottom: 16px;
+  background-color: #ffeaa7;
+  color: #2d3436;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-card {
+  background-color: #2f3640;
+  border: 2px solid #dcdde1;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+}
+
 .cta-buttons {
-  margin-top: 30px;
+  margin-top: 10px;
   display: flex;
-  gap: 16px;
   flex-direction: column;
+  gap: 12px;
   align-items: center;
 }
 
@@ -177,11 +131,12 @@ section {
   padding: 12px 20px;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  width: 200px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 200px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -189,3 +144,20 @@ section {
   transform: translateY(-2px);
 }
 
+.project-list {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.project {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f9f9f9;
+}
+
+.project h3 {
+  margin-top: 0;
+}
