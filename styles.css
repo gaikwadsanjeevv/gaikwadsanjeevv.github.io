@@ -124,4 +124,19 @@ section {
   background-color: #1e60a1;
 }
 
+.project-list {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+.project {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f9f9f9;
+}
+.project h3 {
+  margin-top: 0;
+}
 
