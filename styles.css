@@ -84,46 +84,6 @@ section {
   object-fit: cover;
   margin-bottom: 30px;
 }
-
-.login-box {
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
-}
-
-form input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-}
-
-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #00cec9;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #00b894;
-}
-
-.register-text {
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.register-text a {
-  color: #81ecec;
-  text-decoration: underline;
-}
 .login-note {
   margin-bottom: 15px;
   font-size: 14px;
@@ -140,6 +100,28 @@ form button:hover {
   font-weight: bold;
   font-size: 16px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cta-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #2e86de;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1e60a1;
 }
 
 
